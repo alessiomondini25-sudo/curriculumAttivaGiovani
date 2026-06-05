@@ -1,0 +1,288 @@
+/* ==========================================================================
+   CV.CSS - Tema Scuro & Futuristico (Cyberpunk / Synthwave Sleek)
+   ========================================================================== */
+
+/* Reset e variabili globali */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0f19; /* Sfondo scuro profondo spaziale */
+    color: #e2e8f0; /* Testo chiaro ad alta leggibilità */
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    padding: 100px 20px 40px 20px; /* Spazio superiore per la barra fissa */
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+/* --- Barra di navigazione --- */
+.barra {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(11, 15, 25, 0.9);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 2px solid #00f2fe; /* Linea neon ciano */
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 30px rgba(0, 242, 254, 0.1);
+}
+
+.logo {
+    color: #00f2fe;
+    font-weight: 800;
+    font-size: 1.6rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Effetto linea futuristica sotto i link del menu alla selezione */
+.menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4f46e5;
+    transition: width 0.3s ease;
+}
+
+.menu li a:hover {
+    color: #00f2fe;
+    text-shadow: 0 0 8px rgba(0, 242, 254, 0.5);
+}
+
+.menu li a:hover::after {
+    width: 100%;
+}
+
+/* --- Sezione Home (Profilo) --- */
+#home {
+    text-align: center;
+    background: linear-gradient(135deg, #111827 0%, #1e1b4b 100%);
+    border: 1px solid #312e81;
+    border-left: 5px solid #00f2fe;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#home img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #00f2fe;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+    transition: transform 0.5s ease;
+}
+
+#home img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+#home h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+#home h2 {
+    color: #00f2fe;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
+}
+
+#home p {
+    color: #94a3b8;
+    font-style: italic;
+    font-size: 1.1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* --- Sezioni Contenuto --- */
+#contatti, #esperienze, #formazione {
+    background: #111827;
+    border: 1px solid #1f2937;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+#contatti:hover, #esperienze:hover, #formazione:hover {
+    border-color: #312e81;
+}
+
+/* Titoli delle sezioni */
+h3 {
+    color: #00f2fe;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgba(0, 242, 254, 0.1);
+    padding-bottom: 8px;
+    position: relative;
+}
+
+/* Elemento decorativo sotto i titoli */
+h3::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background-color: #4f46e5;
+}
+
+/* Sotto-blocchi (Esperienze e Formazione singoli) */
+#esperienze > div, #formazione > div {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 3px solid #4f46e5; /* Linea verticale viola/indaco */
+    transition: border-left-color 0.3s ease;
+}
+
+#esperienze > div:hover, #formazione > div:hover {
+    border-left-color: #00f2fe; /* Diventa ciano al passaggio del mouse */
+}
+
+#esperienze > div:last-child, #formazione > div:last-child {
+    margin-bottom: 0;
+}
+
+h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Date e Sedi delle esperienze */
+#esperienze p, #formazione p {
+    color: #38bdf8;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Liste puntate (Competenze/Mansioni) */
+ul {
+    list-style: none; /* Rimuove i punti di default */
+}
+
+li {
+    color: #cbd5e1;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Custom bullet futuristico (quadratino/rombo neon) */
+li::before {
+    content: '▪';
+    position: absolute;
+    left: 0;
+    color: #00f2fe;
+    font-size: 1.1rem;
+    top: -2px;
+    text-shadow: 0 0 5px rgba(0, 242, 254, 0.8);
+}
+
+/* --- Sezione Contatti Specifica --- */
+#contatti p {
+    margin: 12px 0;
+    color: #cbd5e1;
+}
+
+#contatti strong {
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    width: 100px;
+    display: inline-block;
+}
+
+#contatti a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-bottom: 1px dashed rgba(56, 189, 248, 0.3);
+}
+
+#contatti a:hover {
+    color: #00f2fe;
+    border-bottom-color: #00f2fe;
+}
+
+/* Gestione delle classi jolly presenti nel tuo HTML */
+.pippo#pluto {
+    color: #00f2fe;
+}
+
+/* Ottimizzazione per dispositivi Mobile */
+@media (max-width: 600px) {
+    .barra {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+    
+    body {
+        padding-top: 130px;
+    }
+    
+    #home h1 {
+        font-size: 2rem;
+    }
+}
